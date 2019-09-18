@@ -1,0 +1,44 @@
+
+ \section{Unit Deployment and Combat}
+ \subsection{Warp Travel}\label{warp_travel}
+ To redeploy units to another system, void-ships are required (unless the unit in question is itself a void-ship of course). Depending on the unit in question, not any warp-ship suffices (e.g. Titan require special transports).\\
+ Unless otherwise noted, warp travel required \textbf{one round for each five hexes} traveled (rounded up), counting the starting and destination as one hex. travelling to an adjacent hex happens within one round - thus can be considered instantaneous', but can only happen once per round. Each hex within a radius of two of a warp storm (or the great rift or the shadow in the warp) count as three hexes for the purpose of determining the travelled distance.
+ 
+
+ \subsection{Combat Effectiveness (CE)}
+ CE is an abstract notation of the total combat effectiveness of a unit, including combat losses, damaged wargear and exhaustion of soldiers and crew.// 
+CE is measured in percentages, starting with 100\% at the time of unit recruitment. Battle will see this number drop (potentially fast). Recovering (see /ref{recovery}), unit merging and certain events will see the number rise.// 
+\begin{itemize}
+\item Many units will suffer morale degradation if they are below 75\% CE.
+\item Units below 50\% CE contribute less to battles and take increased damage. 
+\item Mechanised Units below a CE of 10\% are effectively immobilised but can still be salvages. 
+\item Once a unit sinks to a CE of 0\% it is beyond saving. Soldiers succumbing to their injuries or flee. Vehicles are beyond battlefield repair or blown up. Void Ships have lost life support and are either reduced to drifting, dead husks or blow up in a short immigration of the stars. 
+\end{itemize}
+
+
+ \subsection{Recovering}
+  Units with supplies left (or a supply line) will recover CE, up to a maximum of 80\% over several rounds. Recovering to 100\% requires the unit to be far from battle for at least one round. Some advanced units have additional requirements for recovery to kick in. Recovering from supplies, reduces the supply counter by two each round. 
+
+ \begin{longtable}{l l l l l l}\toprule
+ Unit Name & CE & Requirement & Resources & One-Time & Recovery \\ \endhead\midrule
+ Regular Infantry & any & - & Men & - & 40\% \\
+ Special Infantry & any & - & Men & - & 33\% \\
+ Mechanized & any & Vexillus & Men, Ore & - & 33\% \\
+ Armored & any & Vexillus & Ore & Men & 25\% \\
+ \makecell[cl]{Astartes} & $\ge$75\% & - & - & - & 5\%\\
+ \makecell[cl]{Astartes} & $<$75\% & - & - & - & 0\%\\
+ \makecell[cl]{Astartes} & $\ge$50\% & Hold or Fleet & Chapter Supply & - & 40\%\\
+ \makecell[cl]{Astartes} & $<$50\% & Hold or Fleet & Chapter Supply & Scout(s) & vary\\
+ Knight & $\ge$50\% & \makecell[lc]{Vexillus or\\Knight World} & GG, Ore & - & 25\%\\
+ Knight & $<$50\% & \makecell[lc]{Exactus or\\Knight World} & \makecell[lc]{GG, Ore, \\Rare Minerals} & Princeps & 20\%\\
+ Titan & $\ge$75\% & Vexillus & GG, Ore & - & 15\% \\
+ Titan & $\ge$50\% & Exactus & \makecell[lc]{GG, Ore,\\Rare Minerals} & - & 15\% \\
+ Titan & $<$50\% & Exactus & \makecell[lc]{GG, Ore,\\Rare Minerals} & \makecell[cl]{Princeps,\\Part(s)*} & 15\% \\
+ Void Ship & $\ge$75\% & - & Fleet Supplies & - & 5\%\\
+ Void Ship & $\ge$75\% & Space Port & GG, Men, Ore & - & 25\%\\
+ Void Ship & $\ge$50\% & \makecell[cl]{Vexillus,\\Space Port} & \makecell[cl]{GG, Men, Ore} & One Part* & 20\%\\
+ Void Ship & $\ge$25\% & \makecell[cl]{Vexillus,\\Space Port} & \makecell[cl]{GG, Men, Ore,\\Rare Minerals} & \makecell[cl]{Officers,\\2 Parts*} & 10\%\\
+  Void Ship & $<$25\% & \makecell[cl]{Exactus} & \makecell[cl]{GG, Men, Ore,\\Rare Minerals} & \makecell[cl]{Officers(x),\\$3^+$ Parts*} & 10\%\\
+ \bottomrule
+ \end{longtable}
+ 

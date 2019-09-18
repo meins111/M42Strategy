@@ -1,0 +1,67 @@
+\section{Planets and Production} 
+\subsection{Stats}
+Planets (and some other places like orbital stations) have several defining stats. 
+\begin{itemize} 
+\item \textbf{Tech-Level:} This attribute defines the highest level production capability of the planet. The levels are as follows: 
+    \begin{itemize} 
+        \item \textbf{None:} This planet has no production ability of note.  
+        \item \textbf{Minima:} This place offers minimal production ability, without major industrial manufactoria. Manual labor and simple tools, nothing more. 
+        \item \textbf{Vexillus:} Most civilized planets fall under this category, representing decent industrial workshops capable of producing all technology that is not reserved by the Adeptus Mechanicus for its own forge worlds. 
+        \item \textbf{Exactus:} The ability to produce the most advanced technology of mankind is reserved to the forge worlds of the Adeptus Mechanicus, represented by this category. 
+    \end{itemize} 
+\item \textbf{Production Slots:} While the Tech-Level describes the quality of goods and units that can be produced on a planet, its production slots define the number of projects that can be undertaken in parallel - and thus represents the amount of workforce this planet has to offer. Production slots are subdivided into the three Tech-Level (Minima, Vexillus and Exactus). Example: Slots 2/2/1 means that the planet in question can have up to two Minima, two Vexillus and one Exactus project running in parallel. 
+\item \textbf{Strategic Resources:} Here, the planets produced and consumed strategic resources are noted. Consumed resources have to be imported from other systems. Produced resources can either be used up for local production projects or be exported to other systems in need of that particular resource. 
+\end{itemize} 
+\todo{Add an example planet stat array here.}
+
+\subsection{Boost System}
+\todo{To be added at a later version.}
+
+\subsection{Projects} 
+Anything a planets produces beside basic resources, is represented as a Production Project. Such a project can be the raising of a new combat unit, the production or refinement of resources, a planetary advancement or an event-specific project. 
+
+A project has the following defining entries: 
+
+\begin{itemize} 
+
+\item \textbf{Name:} The name of the project.  
+
+\item \textbf{Tech-Level:} The minimal required Tech-Level of the project. Lower-tier projects can always be produced in a higher-tier slot - but obviously not the other way round. 
+
+\item \textbf{Duration:} The number of rounds this project takes to complete - given that it's requirements are met each round. The production stalls, if any requirement is violated in any given round. 
+
+\item \textbf{Requirements:} A list of requirements that must be met to make progress in a round. Most commonly, strategic resource requirements are listed here, but sometimes additional requirements like the availability of a specific planetary advancement is listed too. 
+
+\item \textbf{One-Time Requirement:} Sometimes, projects require a specific resource to be available only once during the production. Such requirements are listed separately. 
+
+\item \textbf{Yield:} The project outcome. A specific unit, an advancement, resources, ... 
+
+\end{itemize} 
+
+\subsubsection{Minima-rated Projects} 
+The following projects are available for Minima slots. 
+\begin{itemize} 
+    \item \textbf{GG} Nearly any planet can produce something of value. Be it small arms, basic ammunition, tools, medical supplies, clothing, latrine utensilia. Duration: 1 round. Requirement: -. Yield: GG(1)  
+    \item \textbf{Basic Infantry:} One of the most basic tithes an Imperial planet is subject to, is the regular tithing of its able population for the foundation of new Imperial Guard regiments. Duration: 1 round, Requirement: GG, Men, Yield: one unit of basic infantry adequate to the recruiting planet. 
+    \item \textbf{Shells:} Production of large-calibre shells can be  done on most planets albeit with massive manual labor. Duration: 1 round, Requirement: Ore, Promethium, Yield: Shells(1) 
+    \item \textbf{Basic Planetary Advancements:} Basic planetary Advancements include the strategic supply depot (increases supply buffer) and the Trench Network (increases defenses). Duration: varies, usually 1-3 years. Requirements: varies, usually GG, Ore, Men, Food. Yield: various planetary boni.
+\end{itemize} 
+
+\subsubsection{Vexillus-rated Projects} 
+The following projects are available for Vexillus slots. 
+\begin{itemize} 
+    \item \textbf{Luxury Goods} Many goods fetch extreme prices in certain echelon of the upper sociaty. Duration: 1 round. Requirement: Trade Hub (advancement), any one strategic resource (but GG). Yield: GG(2)  
+    \item \textbf{Advanced Units:} The industrial capabilities of most Vexillus-rated worlds can produce the necessary equipment for most units, as well as parts of large units. Only high-tech weapon systems are beyond their capabilities. Duration: varies, Requirement: varies, Yield: one advanced unit
+    \item \textbf{Shells:} Rather than by many, many hands, shells at this planet are assembled by specialized tool-machines, assembly-streets and servitors which speeds up production considerably.  Duration: 1 round, Requirement: Specialized Manufactoria (Shells), GG, Ore, Promethium, Yield: Shells(3)
+    \item \textbf{Missiles:} With the aid of tool machines and under supervision of Tech-Priests, missiles are constructed by highly trained workers.  Duration: 1 round, Requirement: -, GG(2), Promethium, Yield: Missiles(1)
+    \item \textbf{Industrial Planetary Advancements:} Industrial planetary Advancements include (extract): Trade Hub, Training Center, Specialized Manufactoria, Bastion. Duration: varies, usually 2-5 years. Requirements: varies, usually GG, Ore, Men, Food. Yield: various planetary boni.
+\end{itemize} 
+
+\subsubsection{Exactus-rated Projects} 
+The following projects are available for Exactus slots. 
+\begin{itemize} 
+    \item \textbf{High-Tech Goods:} Bionic enhancements, juvenate treatments, stasis fields and other high-tech goods, produced on some forge worlds, bear the exchange value of entire cargo ships of resources. Duration: 1 round. Requirement: Trade Hub (advancement), any one strategic resource (but GG). Yield: GG(4)  
+    \item \textbf{High-Tech Units:} Only the forge worlds of the Adeptus Mechanicus are able to produce the systems that power the most advanced weapon systems of the Imperium, like plasma weapons or Titans.
+    \item \textbf{Missiles:} Highly refined production processes together with automated, high-precision servitor workers can speed up the production and quality of ammunition considerably.  Duration: 1 round, Requirement: Specialized Manufactorium (Ammunition), GG(3), Promethium(2), Rare Minerals, Yield: Shells(8) or Missiles(4)
+    \item \textbf{Industrial Planetary Advancements:} Massive planetary Advancements requiring high-technology, this includes (extract): Terraforming, highly-specialized manufactorium, space station. Duration: varies, usually 4-8 years. Requirements: varies, usually GG, Ore, Men, Food, Rare Minerals. Yield: various planetary boni.
+\end{itemize} 
