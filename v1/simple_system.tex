@@ -1,3 +1,11 @@
+%!TEX root = ./M42_Strategy.tex
+\section{Armies}
+An army is a collection of units, lead by a commander. Given the nature of warfare in the grim-dark future, an army is (usually) accompanied by fleet elements, providing inter- and intra-system transport, protection and supply storage for the units of the army.
+
+\section{Commanders}
+A commander is an accomplished leader of a faction, put in command of an army. The faction leader of each faction is the overall commander and usually the commander of the main army. Secondary Commanders can be assigned to new armies as necessary.
+
+
 \section{Supplies}
 Fleets, planets and armies require supplies to keep fighting and producing. 
 For this, simplified system all resources are represented by an abstract supply points (SP). 
@@ -45,7 +53,7 @@ The exact upkeep cost of an entity is decided by the activity it is taking durin
 	\end{itemize}
 
 	
-	\item \textbf{Produce:} This activity represents the expenditure of resources to produce something (usually another resource, a unit or planetary advancement).
+	\item \textbf{Produce:} This activity represents the expenditure of resources to produce something (usually supplies, a unit or planetary advancement).
 	\begin{itemize}
 		\item \textbf{Cost:} 2 SP.
 		\item Unlocks the production slots of the entity.
@@ -92,6 +100,7 @@ Table \ref{recovery_table} provides an overview over the requirements and resour
 
 \clearpage
 \onecolumn
+\section{Tables}
 \begin{center}
  \begin{longtable}{l l l l l}\toprule
 	Unit Name & CE & Requirement & RP & Rate \\ \endhead\midrule
@@ -116,6 +125,48 @@ Table \ref{recovery_table} provides an overview over the requirements and resour
 	\bottomrule
 	\caption{Recovery table by unit type.\label{recovery_table}}\\
 \end{longtable}	
+\end{center}
+
+\begin{center}
+\begin{longtable}{l l c c c } \toprule
+    Name & Type & Tech Level & Time & Parts \\ \midrule\endhead
+    \makecell[cl]{Basic Infantry} & Basic & Minima & 1 & - \\ \addlinespace
+    \makecell[cl]{Mechanized Infantry} & Advanced & Vexillus & 3 & - \\ \addlinespace
+    \makecell[cl]{Special Infantry} & Advanced & Vexillus & 3 & - \\ \addlinespace
+    \makecell[cl]{Pulled Artillery} & Advanced & Vexillus & 3 & - \\ \addlinespace
+    \makecell[cl]{Leman Russ Hull}  & Part & Vexillus & 2 & - \\ \addlinespace
+    \makecell[cl]{Turret (Basic)} & Part & Vexillus & 2 & - \\ \addlinespace
+    \makecell[cl]{Turret (Advanced)}  & Part & Exactus & 3 & - \\ \addlinespace
+    \makecell[cl]{Leman Russ Assembly}  & Assembly & Vexillus & 1 & \makecell[cl]{Hull,\\Turret} \\\addlinespace
+    \makecell[cl]{Astartes Scouts} & Advanced & Minima & 2 & Neophytes \\ \addlinespace
+    \makecell[cl]{Astartes Wargear} & Part & Exactus & 4 & - \\ \addlinespace
+    \makecell[cl]{Knight Chassis} & Part & Vexillus & 1 & - \\ \addlinespace
+    \makecell[cl]{Knight Power Core} & Part & Exactus & 2 & - \\\addlinespace
+    \makecell[cl]{Titan Basic Weapon} & Part & Vexillus & 1 & - \\ \addlinespace
+    \makecell[cl]{Titan Advanced Weapon} & Part & Exactus & 2 & - \\ \addlinespace
+    \makecell[cl]{Knight} & Assembly & Vexillus & \makecell{1 per\\part} & \makecell[cl]{Chassis,\\Core,\\Weapons} \\ \addlinespace
+    \makecell[cl]{Warhound Chassis} & Part & Vexillus & 4 & - \\ \addlinespace
+    \makecell[cl]{Warhound Power Core} & Part & Exactus & 4 & - \\\addlinespace
+    \makecell[cl]{Warhound} & Assembly & Exactus & \makecell{1 per\\part} & \makecell[cl]{Chassis,\\Core,\\Weapons} \\ \addlinespace
+    \makecell[cl]{Warlord Chassis} & Part & Vexillus & 4 & - \\ \addlinespace
+    \makecell[cl]{Warlord Legs} & Part & Vexillus & 2 & - \\ \addlinespace
+    \makecell[cl]{Warlord Head} & Part & Exactus & 4 & - \\ \addlinespace
+    \makecell[cl]{Warlord Power Core} & Part & Exactus & 6 & - \\\addlinespace
+    \makecell[cl]{Warlord} & Assembly & Exactus & \makecell{1 per\\part} & \makecell[cl]{Chassis,\\Core,\\Legs,\\Head,\\Weapons}\\ \addlinespace
+    \makecell[cl]{Ship Hull Section} & Part & Vexillus & 4 & - \\ \addlinespace    
+    \makecell[cl]{Ship Core} & Part & Exactus & 6 & - \\ \addlinespace  
+    \makecell[cl]{Ship Bridge} & Part & Exactus & 4 & - \\ \addlinespace 
+    \makecell[cl]{Ship Engines} & Part & Exactus & 4 & - \\ \addlinespace 
+    \makecell[cl]{Macrocannon Battery} & Part & Vexillus & 2 & - \\ \addlinespace 
+    \makecell[cl]{Lance Battery} & Part & Exactus & 3 & - \\ \addlinespace 
+    \makecell[cl]{Torpedo Tubes} & Part & Vexillus & \makecell{1 per\\2 tubes} & - \\ \addlinespace 
+    \makecell[cl]{Flight Deck} & Part & Vexillus & 6 & - \\ \addlinespace 
+    Frigate & Assembly & Vexillus & \makecell{1 per\\part}& \makecell{Hull,\\Core\\Engine\\Weapons} \\\addlinespace
+    Cruiser & Assembly & Exactus & \makecell{1 per\\part}& \makecell{2xHull,\\2xCore\\Engine\\Bridge\\Weapons} \\\addlinespace
+    Battleship & Assembly & Exactus & \makecell{1 per\\part}& \makecell{4xHull,\\2xCore\\2xEngine\\Bridge\\Weapons} \\\addlinespace
+     
+        \bottomrule
+\end{longtable}
 \end{center}
 
 \clearpage
