@@ -1,26 +1,83 @@
 %!TEX root = ./M42_Strategy.tex
 \chapter{Units \& Battlegroups}
 \section{Units}
-Units are the building blocks of the military force of a faction. The scale of a single unit varies greatly between (and even within) factions. While the Imperial Guard fields sprawling regiments several hundreds strong, the Adeptus Astartes deploy single squad units or even a single Dreadnought. The Adeptus Mechanicus can field its Skitarii forces in a similar fashion as a Guard Regiment, but has also access to Titans, which are deployed alone or in hunting packs of two in case of the Warhound type.\\
-Units are recruited, have to be supplied, acquire experience and loose Combat Efficiency (CE) during fighting and recover CE during times of (relative) piece. 
-Units (without the exception of void ships) cannot move on their own (beyond the planet they were recruited on) and have to link up with an army first.
+Units are the building blocks of the military force of a faction. The scale of a single unit varies greatly between (and even within) factions. While the Imperial Guard fields sprawling regiments several hundreds strong, the Adeptus Astartes deploy single squad units or even a single Dreadnought. The Adeptus Mechanicus can field its Skitarii forces in a similar fashion as a Guard Regiment, but has also access to Titans, which are deployed alone or in hunting packs of two.
 
-\section{Battle Groups and Units}
-A Battle Group is a collection of units, lead by a commander. Given the nature of warfare in the grim-dark future, a Battle Group is (usually) accompanied by or comprised of Imperial Navy elements, providing inter- and intra-system transport, protection and supply storage for the units making up the Battle Group.  In game, a Battle Group can be called any number of things
-like Army, Fleet, Crusade, or Strike Group.  These are all well and good and their use is encouraged, but this document will stick with Battle Group for clarity.
-Units are the smaller parts that make up the whole that is the Battle Group.  This could be anything from an individual Titan to a full Guard Regiment, whatever comprises the smallest part of the given faction's forces.
+\subsection{Stats}
+All units have two stats: HP and Morale. Both are measured in percentages.
+\begin{itemize}
+	\item \textbf{HP:} represents the physical status of the unit, whether it is the wellbeing of mortal troops or the hull integrity of a void ship. HP is lost during combat and recovers when the unit receives necessary supplies and the time to do so (see section \ref{recovery_section}). A units HP can never rise above 100\%. Should a units HP drop to 0\% it is destroyed.
+	\item \textbf{Morale:} represents the mental status of the unit. A low morale reduces the combat effectiveness considerably, while a high morale may drive a unit to new heights. A units morale may rise above 100\% (e.g. by the skills of linked commanders and heroes). Should a units morale drop to 0\%, it will break and attempt to flee the battlefield. Depending on the outcome of the war, such a unit may be run down by the enemy, field executed by their own or actually survive to life with the shame of cowardice. 
+\end{itemize}
+From HP and Morale a units current Combat Effectiveness	(CE) is derived, which determines the strength of a unit during a fight.
+\begin{itemize}
+	\item \textbf{CE:} $HP \times \frac{Morale}{100}$
+\end{itemize}
 
-\section{Commanders}
+
+\section{Battle Groups \& Units}
+A Battle Group is a collection of units, lead by a commander. Given the nature of warfare in the grim-dark future, a Battle Group is (usually) accompanied by or comprised of Imperial Navy elements, providing inter- and intra-system transport, protection and supply storage for the units making up the Battle Group.  In game, a Battle Group can be called any number of things like Army, Fleet, Crusade, or Strike Group. 
+These are all well and good and their use is encouraged, but this document will stick with Battle Group for clarity.
+Units are the smaller parts that make up the whole that is the Battle Group. \\
+Any Battle Group is lead by a Commander and may be accompanied by a number of heroes.
+
+\section{Commanders \& Heroes}
 A commander is an accomplished leader of a faction who is put in command of a Battle Group. The faction leader of each faction is the overall commander and usually the commander of the key forces of the faction. 
 Secondary Commanders can be assigned to new Battle Groups as necessary. Commanders can gain traits and followers (advisors, bodyguards, ...) during the course of their career.
 
-\section{Heroes}
 Heroes are singular entities renowned throughout their factions and possibly beyond. Heroes can move around on their own - they do not need a commander or large fleet. A single small warp-capable ship will suffice.
 Heroes can be linked to a Battle Group, providing a morale boost to all units therein. 
 Whether or not they are linked to a Battle Group, heroes have different skills (some active some passive) they can use to influence the world around them.
 One hero can only use one active skill per round.
 Similar to Commanders, heroes will acquire traits throughout their career.
 
+\subsection{Adeptus Astartes Heroes}
+\begin{itemize}
+    \item \textbf{Chaplain:} Extremely capable, fear inducing melee specialist tasked with the mental well-being and loyalty of allies.
+    \begin{itemize}
+        \item Special Action [Preach]: Greatly improves loyalty and morale of local population or targeted allied unit. The lower its morale or loyalty was, the greater the boost it will receive.
+        \item Special Action [Purge]: Reduce HP of an allied unit with the "Corrupted" or "Infected" trait to remove the effect. HP reduction depends on the severity of the respective effect.
+        \item Passive Effect: 20\% Morale boost for all allied units on the same battlefield.
+        \item Passive Effect: 20\% Morale penalty for enemy units subject to fear.
+    \end{itemize}
+    
+    \item \textbf{Librarian:} Powerful psychic combatant, wielding the powers of the warp to destroy the enemy. When activating any of active effect, there is a risk involved of his talents to backfire.
+    \begin{itemize}
+        \item Special Action [Precognition]: Attempt to divine the strategic moves of the enemy up to a year in advance.
+        \item Special Action [Holocaust]: Unleashes a massively powerful psychic firestorm against an enemy unit. Induces direct HP damage to the selected target. Increased damage against units with the [Psyker], [Demonic], [Mutant] or [Tyrannid] trait. Deals additional morale damage to other enemy units on the same battleground.
+        \item Passive Effect: Detects powerful psychic enemies, performed rituals and large-scale warp movement (e.g. from an approaching fleet) within the sub-sector.
+        \item Passive Effect: Shields assigned units from most psychic powers. Reduces the effect of powerful psychic powers on assigned units.
+    \end{itemize}
+
+    \item \textbf{Apothecari:} Honor-bound to retrieve the geneseed of fallen brethren as well as to see to the wounded.
+    \begin{itemize}
+        \item Special Action [Cure]: Attempts to cure one of father Nurgle's many 'gifts' from a target unit or population, restoring HP and Morale if successful.
+        \item Special Action [Screen]: Increase the chance of the local planet to produce one unit of Neophytes. Increased chance to detect genestealer cults.
+        \item Passive Effect: Slightly reduces the HP damage allied units within the same battlefield take from combat.
+        \item Passive Effect: Increase the recovery rate of Astartes units in the field by 5\% and aboard the chapter fleet or at a chapter hold by 10 \%.
+        \item Passive effect: Increase the chance to recover the geneseed of fallen Astartes (regardless of chapter) on the same battlefield.
+    \end{itemize}
+    
+    \item \textbf{Tech-Marine:} Trained by the Adeptus Mechanicus in the way of the machine god. His task is to oversee the maintenance of the chapters wargear.
+    \begin{itemize}
+        \item Special Action [Rite of Entombment]: After the death of a Commander, Hero or Veteran-ranked combat squad, the Tech-Marine can perform the rite of entombment, allowing for duty beyond death for his fallen brother. This action triggers a recruitment process with the following specifics: 
+        \begin{itemize}
+            \item Dreadnought / Assembly / Chapter Hold or Fleet / 1 / Dreadnought Chassis
+        \end{itemize}
+        \item Special Action [Artificer Wargear]: Being even less dependent on sleep than his brethren, a Tech-Marine spends any free time on the anvil to produce armor and arms of exceptional quality. In addition to Astartes wargear (see: \ref{production_table_units}) a Tech-Marine can also create Terminator armor and dreadnought chassis given enough time and resources. This action triggers one of the following production processes, whenever his Battlegroup is in the Production stance.
+        \begin{itemize}
+            \item Dreadnought Chassis / Part / Chapter Hold or Fleet / 16 
+            \item Suit of Terminator Armor / Part / Chapter Hold or Fleet
+        \end{itemize}
+        \item Special Action [Fortify]: The Tech-Marine works in concert with chapter Servitors and serfs to create a fortified position on the battlefield (or to reinforce the protection of an existing stronghold). Any such fortified position provides a considerable CE boost to any allied unit defending itself against attacks.
+        \item Special Action [Jam]: The Tech-Marine attempts to jam the communication equipment of an enemy Battle Group, reducing the CE of all its units for one round. Ambush, Shock and surprise assaults on a jammed macro unit inflict additional HP and Morale damage.
+        \item Passive Effect: Attached Astartes units may recover in the field regardless of their remaining HP, as the Tech-Marine is keeping their equipment in working condition.
+        \item Passive effect: Attached Astartes armored units recover 5\% HP in the field, as long as they have more than 50\% HP left.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Traits}
+TODO
 
 \chapter{Supplies \& Production}
 \section{Supplies}
@@ -113,12 +170,11 @@ The exact upkeep cost of an entity is decided by the Stance(s) it is assuming du
 	\end{itemize}   
 \end{itemize}
 
-\section{Recovery}
+\section{Recovery} \label{recovery_section}
 Table \ref{recovery_table} provides an overview over the requirements and resource demands of a unit recovering from combat damage.
 
-\clearpage
 \onecolumn
-\section{Tables}
+\chapter{Tables}
 \begin{center}
  \begin{longtable}{l l l l l}\toprule
 	Unit Name & CE & Requirement & RP & Rate \\ \endhead\midrule
