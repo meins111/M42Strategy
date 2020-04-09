@@ -77,26 +77,53 @@ This particular experienced Navigator of a high-standing family is well able to 
 
 
 \chapter{Supplies \& Production}
+\textit{You can never have enough ammunition, fuel, canned rations and toilet paper. \\- Unknown Commander, ca. M02}
 \section{Supplies}
 Fleets, planets and Battle Groups require supplies to keep fighting and producing. 
 A simplified system of Supply Points (SP) representing all resources will be used to reduce complexity at the outset.
 Depending on the stance the unit or planet assumes, it may increase or lower its current supply points by a certain amount.
-Should an entity run out of supply points, it will start taking CE damage each round in addition to a serious decline in effective fighting power should it be attacked by the enemy.
+Should an entity run out of supply points, it will start taking HP and Morale damage each round in addition to an additional CE penalty should it be attacked by the enemy.
 
 
 \section{Production}
 Planets throughout the Imperium are geared towards the production of a wild variety of goods required by its fighting forces be it ammunition, tanks, fuel or new recruits.
 Planets (and other production facilities) can assume the production stance to unlock the full potential of its manufactoria.
 Taking on that stance opens the production slots of the entity, which can be either used to restock supply points or to recruit new units.
-Production slots are divided into three levels, representing the technology required to produce goods of that level.
+
+\subsection{Technology Levels}
+Production slots are divided into three levels, representing the level of infrastructure required to produce goods of that level.
 \begin{itemize}
-	\item \textbf{Minima:} Basic goods that can be produced on nearly any Imperial planet. One Minima slot can produce one SP per round.
-	\item \textbf{Vexillus:} Industrial-grade goods which can be produced on most civilized worlds of the Imperium but which are not available on more archaic worlds.	One Vexillus slot can produce two SP round.
-	\item \textbf{Exactus:} Highly advanced technology that can only be produced on forge worlds or a few other places with a high density of high-ranking Tech priests. An Exactus slot can produce three SP per round.
+	\item \textbf{Minima:} Basic goods that can be produced on nearly any Imperial planet, relying mostly on manual labor and ubiquitously available tools. One Minima slot can produce one SP per round.
+	\item \textbf{Vexillus:} Large-scale manufactoria powered by engines of steam, fuel, electricity, plasma generators or solar collectors dot the surface of many civilized and Hive worlds of the Imperium. The majority of common products is mass produced in such places. One Vexillus slot can produce two SP round.
+	\item \textbf{Exactus:} The most advanced technology and the ways to produce them is a highly guarded secret of the highest echelons of the Adeptus Mechanicus and limited to their own manufactoria, usually reserved for Forge Worlds. An Exactus slot can produce three SP per round.
 \end{itemize}
 
+\subsection{Standard Template Construct}
+Any somewhat advanced technological product relies on patterns taken from uncovered STCs, which date back to the Dark Age of Technology. STC fragments are hoarded and jealously guarded by the Adeptus Mechanicus. Without access to the correct STC patterns no product can be produced, even if the planet would have the necessary infrastructure to do so. 
+Common patterns are usually licensable from the priests of Mars and allows the production of goods on non-mechanicus worlds.
+
+In the game, this is represented by system traits, noting the STCs available to their manufactoria. To prevent exceedingly long lists of traits, the game bundles does track entire STC patterns rather than individual STCs. See the sidebars below for examples. Note however, that a world must also have the necessary infrastructure to actually produce goods of a specific pattern even if it has the STCs available. So while a feudal world might still retain the STC for a starship plasma core, it is far from able to actually produce it.
+
+\begin{DndSidebar}{M36 Lasgun [Pattern]}
+ The most common pattern of the most widespread used weapon in the Imperium of Men. This pattern includes the power pack design used to power the gun.
+ \begin{itemize}
+ 	\item \textbf{Production Options:} Regular Infantry, Special Infantry [Scouts, Line]
+ 	\item \textbf{Tech Level:} Vexillus
+ \end{itemize}
+\end{DndSidebar}
+
+\begin{DndSidebar}{DIY Stubber Guns [Pattern]}
+This collection of patterns provides all necessary steps to assemble simple yet deadly solid projectile weapons (and associated ammunition) with a minimum of tools and knowledge.
+ \begin{itemize}
+ 	\item \textbf{Production Options:} Regular Infantry, Special Infantry [Scouts, Line]
+ 	\item \textbf{Tech Level:} Minima
+ \end{itemize}
+\end{DndSidebar}
+
+
+
 \subsection{Logistic Groups}
-Very large fleets are usually accompanied by at least one but possibly several ship groups tasked with producing the most important goods (food, ammunition) on-the-fly, expecially if supply lines are expected to be threatened or unreliable. 
+Very large fleets are usually accompanied by at least one but possibly several ship groups tasked with producing the most important goods (food, ammunition) on-the-fly, especially if supply lines are expected to be threatened or unreliable. 
 Such groups usually have a Goliath-class factory ship at their heart as well as a host of smaller vessels tasked with mining asteroids, gas nebulae, and stellar winds for base resources which are then processed by the Goliath into ammunition, wargear, tools, armor plating and most other industrial-grade goods the fleet requires. \newline
 A single logistic group can store six SP and has 2 Minima and 2 Vexillus production slots if it assumes the Production stance. Thus, a single logistic group can produce a up to a total of 6 SP per round.
 \begin{itemize}
