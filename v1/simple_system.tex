@@ -14,6 +14,22 @@ From HP and Morale a units current Combat Effectiveness	(CE) is derived, which d
 	\item \textbf{CE:} $HP \times \frac{Morale}{100}$
 \end{itemize}
 
+\subsection{Experience}
+Units accumulate experience when they train or fight and will loose XP when staying idle or recover from combat losses. 
+At certain XP thresholds (levels) a unit will receive a new trait of equal name, representing its veteran status. 
+Reaching a new level resets the accumulated XP of the unit.
+Once reaching a new level, it will not drop below this level due to XP loss.
+The four ranks are:
+\begin{itemize}
+	\item \textbf{Conscript:} Freshly and hastily recruited troops start at this rank. Militias of planets fall under this category as well. Conscript troops have a maximum morale stat of 90\%.
+	\item \textbf{Soldier:} Thoroughly trained troops will start at this level. A conscript troop will require 4 XP to achieve this level. Soldier rank units can have a maximum morale stat of 120\%.
+	\item \textbf{Veteran:} After long campaigning a unit may achieve the rank of veteran. Veteran units can have a maximum morale of 150\%. Soldier rank units will require 16 XP to achieve Veteran status.
+	\item \textbf{Hero:} Only few units are hardy enough to become true heroes of the Imperium. Those that do are rightfully famous and feared by the enemies of mankind. Heroes can have a maximum morale stat of 200\% and will not break once reaching 0\% morale. Once a unit reaches Hero status, the controlling faction has the unique opportunity to recruit a new hero or commander from their ranks. Veterans need to accumulate 32 XP to become Heroes.
+\end{itemize}
+
+\subsection{Unit Traits}
+Units will have a short list of traits, which depend on their origin, type, experience level, equipment and external circumstances.
+Traits are used to determine a units fighting power in a specific war.
 
 \section{Battle Groups \& Units}
 A Battle Group is a collection of units, lead by a commander. Given the nature of warfare in the grim-dark future, a Battle Group is (usually) accompanied by or comprised of Imperial Navy elements, providing inter- and intra-system transport, protection and supply storage for the units making up the Battle Group.  In game, a Battle Group can be called any number of things like Army, Fleet, Crusade, or Strike Group. 
@@ -102,12 +118,12 @@ Production slots are divided into three levels, representing the level of infras
 Any somewhat advanced technological product relies on patterns taken from uncovered STCs, which date back to the Dark Age of Technology. STC fragments are hoarded and jealously guarded by the Adeptus Mechanicus. Without access to the correct STC patterns no product can be produced, even if the planet would have the necessary infrastructure to do so. 
 Common patterns are usually licensable from the priests of Mars and allows the production of goods on non-mechanicus worlds.
 
-In the game, this is represented by system traits, noting the STCs available to their manufactoria. To prevent exceedingly long lists of traits, the game bundles does track entire STC patterns rather than individual STCs. See the sidebars below for examples. Note however, that a world must also have the necessary infrastructure to actually produce goods of a specific pattern even if it has the STCs available. So while a feudal world might still retain the STC for a starship plasma core, it is far from able to actually produce it.
+In the game, this is represented by system traits, noting the STCs available to their manufactoria. To prevent exceedingly long lists of traits, the game does track entire STC patterns rather than individual STCs. See the sidebars below for examples. Note however, that a world must also have the necessary infrastructure to actually produce goods of a specific pattern even if it has the STCs available. So while a feudal world might still retain the STC for a starship plasma core, it is far from able to actually produce it.
 
-\begin{DndSidebar}{M36 Lasgun [Pattern]}
- The most common pattern of the most widespread used weapon in the Imperium of Men. This pattern includes the power pack design used to power the gun.
+\begin{DndSidebar}{Infantry-grade Las Weapons [Pattern]}
+This pattern includes some of the most widely used patterns of the reliable laser technology, including the trusty lasgun, hotshot variants and the powerful lascannon. The power pack design used to power them is also included.
  \begin{itemize}
- 	\item \textbf{Production Options:} Regular Infantry, Special Infantry [Scouts, Line]
+ 	\item \textbf{Production Options:} Regular Infantry, Special Infantry [Scouts, Line, Storm Troopers, Tank Hunters], Armored [Leman Russ Annihilator]
  	\item \textbf{Tech Level:} Vexillus
  \end{itemize}
 \end{DndSidebar}
@@ -120,15 +136,13 @@ This collection of patterns provides all necessary steps to assemble simple yet 
  \end{itemize}
 \end{DndSidebar}
 
-
-
 \subsection{Logistic Groups}
-Very large fleets are usually accompanied by at least one but possibly several ship groups tasked with producing the most important goods (food, ammunition) on-the-fly, especially if supply lines are expected to be threatened or unreliable. 
+Large fleets are usually accompanied by at least one but possibly several ship groups tasked with producing the most important goods (food, ammunition) on-the-fly, especially if supply lines are expected to be threatened or unreliable. 
 Such groups usually have a Goliath-class factory ship at their heart as well as a host of smaller vessels tasked with mining asteroids, gas nebulae, and stellar winds for base resources which are then processed by the Goliath into ammunition, wargear, tools, armor plating and most other industrial-grade goods the fleet requires. \newline
-A single logistic group can store six SP and has 2 Minima and 2 Vexillus production slots if it assumes the Production stance. Thus, a single logistic group can produce a up to a total of 6 SP per round.
+A single logistic group can store 12 SP and has 2 Minima and 2 Vexillus production slots if it assumes the Production stance. Thus, a single logistic group can produce a up to a total of 6 SP per round.
 \begin{itemize}
-	\item \textbf{Astartes Chapter Fleet:} Start with two logistic groups.
-	\item \textbf{Ad-Mech Explorator Fleet:} Start with two logistic groups and may include an Ark Mechanicus, which has the following profile. Slots: 2$\|$2$\|$2 (up to 12 SP).
+	\item \textbf{Astartes Chapter Fleet:} Start with one logistic group. Fleet based Chapters typically have access to huge and ancient battle barges, which have considerable production abilities in addition to their fighting power and enormous resilience. A battle barge has the following profile: 1$\|$2$\|$1 (up to 8 SP per round) and can store 12 SP.
+	\item \textbf{Ad-Mech Explorator Fleet:} Start with one logistic group and may include an Ark Mechanicus, which has the following profile: 2$\|$2$\|$2 (up to 12 SP per round) and can store up to 24 SP.
 \end{itemize}
 
 \chapter{Combat}
@@ -140,7 +154,7 @@ The exact upkeep cost of an entity is decided by the Stance(s) it is assuming du
 	\begin{itemize}
 		\item \textbf{Cost:} 0 SP.
 		\item Planets and other producers loose their basic production and halt any projects and recruitments.
-		\item Units loose 1 experience point per round while staying idle.
+		\item Units loose 1 experience points per round while staying idle.
 		\item This activity cannot be combined with other activities.
 	\end{itemize}
 
@@ -148,7 +162,7 @@ The exact upkeep cost of an entity is decided by the Stance(s) it is assuming du
 	\begin{itemize}
 		\item \textbf{Cost:} 1 SP.
 		\item Unlocks inter-system warp travel and large scale intra-system ground force redeployment.
-		\item This can be combined with: Produce, Brace and Recover. If combined with Produce, reduce the number of hexes you can travel by half rounded down.
+		\item This can be combined with: Produce, Brace and Recover. If combined with Produce, reduce the number of hexes you can travel by half (round down).
 	\end{itemize}
 
 	
@@ -163,7 +177,7 @@ The exact upkeep cost of an entity is decided by the Stance(s) it is assuming du
 	\begin{itemize}
 		\item \textbf{Cost:} 2 SP.
 		\item Units gains one experience point per turn
-		\item Non-Unit entities (e.g. planets) can raise their CE beyond 100\% by taking this action. It rises by 10\% per round to a maximum of 150\%.
+		\item Non-Unit entities (e.g. planets) can raise their HP beyond 100\% by taking this action. It rises by 10\% per round to a maximum of 150\%.
 		\item Units taking this activity gain the 'on guard' trait for the duration of the activity thus raising the chance to detect enemy activity in the local area.
 		\item Can be combined with the Move, Recover and Produce activities. 
 		\item If combining this stance with Produce, non-unit entities reduce their base production and available production slots by half (round up).
@@ -175,20 +189,20 @@ The exact upkeep cost of an entity is decided by the Stance(s) it is assuming du
 		\item \textbf{Cost:} 3 SP.
 		\item Units gain experience from combat. This can range from 2 to 8 experience points depending on the scale and length of the fighting as well as the outcome - victory yields more than defeat.
 		\item Units cannot combine this stance with any other.
-		\item Non-Unit entities can combine this stance with any other as long as its CE remains above 50\% with the following constraints: 
+		\item Non-Unit entities can combine this stance with any other as long as its HP remains above 50\% with the following constraints: 
 		\begin{itemize}
 			\item Does no longer benefit from trade routes.
 			\item Production slots and base production are halved (round down)
 			\item Any recruitment process has a 33\% chance to not make any process during any given round due to enemy intervention.
-			\item CE increase from the Brace and Recover stance are reduced by half (round down).
+			\item HP increase from the Brace and Recover stance are reduced by half (round down).
 		\end{itemize}
 	\end{itemize}
 	
 	\item \textbf{Recover:} Combat losses and collateral damage are inevitable in the struggle for mankind's survival. Restoring good order, repairing damaged war-gear, and filling up the losses with new recruits is the purview of the Recover activity. The resource demands between two given units can be very large, thus the abstract notion of recovery points (RP) is used. The higher the RP of a unit type, the higher the cost to recover it.
 	\begin{itemize}
 		\item \textbf{Cost:} 1 SP per five recovery points used (round up).
-		\item Allows the entity in question to restore CE. Note that advanced units may have additional requirements that must be fulfilled before recovery kicks in (e.g. some may require a certain tech-level to be met).
-		\item Recovering causes the unit to loose some experience points as new recruits fill up the ranks of dead veterans. For mechanical units, this represents the introduction of new parts (and thus machine spirits) into a greater whole, introducing minute changes in its behavior. A unit looses one experience for each 20\% CE it recovers.
+		\item Allows the entity in question to restore HP. Note that advanced units may have additional requirements that must be fulfilled before recovery kicks in (e.g. some may require a certain tech-level to be met).
+		\item Recovering causes the unit to loose some experience points as new recruits fill up the ranks of dead veterans. For mechanical units, this represents the introduction of new parts (and thus machine spirits) into a greater whole, introducing minute changes in its behavior. A unit looses one experience for each 20\% HP it recovers.
 		\item Non-Unit entities recover 10\% per turn.
 		\item Can be combined with the Move, Brace and Produce activities.
 	\end{itemize}   
