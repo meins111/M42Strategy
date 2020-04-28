@@ -14,6 +14,26 @@ From HP and Morale a units current Combat Effectiveness	(CE) is derived, which d
 	\item \textbf{CE:} $HP \times \frac{Morale}{100}$
 \end{itemize}
 
+\subsection{Power Tiers}
+Units are divided up into several tiers representing their baseline strength. 
+Units within the same tier are roughly on equal terms. 
+Units of the same tier prefer to fight enemy units of the same tier.
+Should a unit fight an enemy of a lower tier it gains two Edges (plus one for each tier difference beyond the first) and increase any inflicted damage by half.
+\begin{itemize}
+	\item \textbf{Tier 1 - Swarms:} Masses of low quality troops are not a danger to most other units by themselves but usually come with overwhelming numbers. Example units: Militia, Flagellates, Gaunts, chaos spawn, Nurglings, Gretchins, Squigs, cultists.
+	\item \textbf{Tier 2 - Regular Infantry:} Units of this category represent the backbone of a factions fighting forces. They are equipped with mass-produced arms and armor as well as decent military training according to the standards of their culture. Examples: baseline Guard Regiment, PDF, baseline Skitarii, Ork Boy Mob, Fire Warriors w/o Drones, Traitor Guard Regiment, Genestealer Hybrids
+	\item \textbf{Tier 3 - Special Infantry:} These units receive advanced training and equipment, elevating them above their comrades in fighting power. Examples: Storm Troopers, elite Guard Regiment (Drop Troops, Kasarkin, Kriegers, ...), advanced Skitarii, Heavy Combat Servitors, Adeptus Sororitas, Ork Kammandos, Stormboyz, Tankbustas, Fire Warrior w. Drones, Eldar Aspect Warriors, Lesser Daemons
+	\item \textbf{Tier 4a - Elite Infantry:} These units represent the pinnacle of infantry-grade units of a faction. Examples: Space Marines, Assassins, Chaos Marines, Ork Nobz, Tyranid Warrior Forms, Pure-strain Genestealer, Eldar Harlequins, Wrath Guard, Necron Warriors
+	\item \textbf{Tier 4b - Mechanized Infantry:} Infantry units deploying supportive armored vehicles for save and fast transport as well as for heavy fire support. Example units: Mechanized Guard Regiment (Chimera, Hellhounds, Sentinels), Astartes Bikes and Land Speeder, Eldar Jetbikes.
+	\item \textbf{Tier 5a - Armor:} Mainline battle tanks in orderly ranks. Examples: Leman Russ Armored Regiments, Astartes Armor Support, Loota-Tank, Defiler, Falcon
+	\item \textbf{Tier 5b - Combat Walkers:} These heavily armed and armored walkers are able to lay down and withstand withering fire and are often exceedingly deadly in close combat, especially against enemy armor. Examples: Dreadnoughts, Deaf Dread, Wraithlord, Carnifex, Terminators, Tau Battle Suites, Decimator
+	\item \textbf{Tier 6a - Heavy Armor:} Bigger, slower and even stronger armored and armed than common tanks, these units are land behemoths, crushing infantry beneath their treats and laying waste to entire frontlines. Examples: Baneblade, Land Raider, Battlewagon, Brass Scorpion, Forgefiend, Hive Tyrant, Cobra,
+	\item \textbf{Tier 6b - Knights:} These units are in essence upscaled combat walkers the size of small buildings and with weaponry to destroy entire colomns of tanks. Examples: Imperial Knights, Chaos Knights, Wraithknight, Greater Daemon
+	\item \textbf{Tier 7 - Scout Titans:} The first true category of godmachines, scout class titans range ahead of their larger kin, lay in ambush and take on the flanks and backs of enemy titan formations. Against any non-titan unit, its weaponry is downright devastating. Examples: Warhound, Death Wheel, Stompa, Feral, Revenant, Vituperator
+	\item \textbf{Tier 8 - Battle Titans:} True titans of the battlefield, these war machines are city killers and planet razors. Examples: Warlord, Reiver, Phantom, Gargant, Ravager, Bane/Plague/Pain/Warplord, Hierophant
+	\item \textbf{Tier 9 - Apex:} The most devastating of them all. Examples: Imperator Titan, Ordinatus Warmachines, Warmonger, Mega-Gargant, Warlock, Hydraphant, Daemon Prince
+\end{itemize}
+
 \subsection{Experience}
 Units accumulate experience when they train or fight and will loose XP when staying idle or recover from combat losses. 
 At certain XP thresholds (levels) a unit will receive a new trait of equal name, representing its veteran status. 
@@ -37,22 +57,24 @@ Having a flaw adds one Edge to the total sum of the enemy unit.
 Some traits have two levels: expert and master. 
 Expert traits provide one Edge while master level traits provide two.
 \begin{itemize}
-	\item \textbf{Environmental Sealed:} Unit is immune to environmental effects, like poisonous attacks or toxic atmospheres and can be deployed in places without proper atmosphere.
-	\item \textbf{Shock Troop (Expert/Master):} The unit employs powerful shock and awe tactics or is otherwise able to inspire fear in enemy units. It gains Edge against units with the [Strength in Number] and [Expandable] traits. In addition, any inflicted Morale damage is doubled.
-	\item \textbf{Anti-Infantry:} The unit is particularly equipped and trained to take out large amounts of enemy infantry but is lacking against heavily armored targets. It gains Edge against infantry units and two Edges against units with the [Strength in Number] trait but takes a Flaw against armored units.
-	\item \textbf{Anti-Armor:} The unit is particularly equipped and trained to take out enemy armor but is lacking against large formations of lesser targets. The unit has Edge against armored targets but takes Flaw against units with the [Strength in Number] trait.
+	\item \textbf{Environmental Sealed:} Unit is immune to environmental effects, like poisonous attacks or toxic atmospheres and can be deployed in places without breathable atmosphere.
+	\item \textbf{Shock Troop (Expert/Master):} The unit employs powerful shock and awe tactics or is otherwise able to inspire fear in enemy units. It gains Edge against regular infantry units and any unit with the [Expandable] trait. In addition, any inflicted Morale damage is doubled.
+	\item \textbf{Anti-Infantry:} The unit is particularly equipped and trained to take out large amounts of enemy infantry but is lacking against heavily armored targets. It gains Edge against infantry units and two Edges against units with the [Strength in Number] trait but takes a Flaw against armored units. It will target swarms first followed by regular and special infantry.
+	\item \textbf{Anti-Armor:} The unit is particularly equipped and trained to take out enemy armor but is lacking against large formations of lesser targets. The unit has Edge against armored targets but takes Flaw against units with the [Strength in Number] trait. It will target armored units first.
 	\item \textbf{Stealthy:} The unit is adept at moving, deploying and fighting without being noticed. During ongoing wars or skirmishing this unit has a chance to deal major HP and Morale damage to a single enemy unit.
 	\item \textbf{Know No Fear:} This unit will never break due to Morale loss and will continue fighting unto death. Once its morale drops to 0\% it will take 50\% increased HP damage.
-	\item \textbf{Hit'n'Run:} This fast unit is able to hit an enemy hard and fast before quickly disengaging before reinforcement or heavy weapons can be broad to bear on them. This unit has Edge during the first round of an engagement and skirmishes.
+	\item \textbf{Hit'n'Run:} This fast unit is able to hit an enemy hard and fast and quickly disengage before reinforcement or heavy weapons can be broad to bear on them. This unit has Edge during the first round of an engagement and during skirmishes.
  	\item \textbf{Psyker (Delta/Beta/Alpha/Alpha+):} This units has psychic powers it can field for devastating effects. It has Edge against non-psyker units but at the (low) risk of suffering serious HP damage and the even lower chance of triggering dangerous warp-related events. Alpha and Alpha+ grade Psyker deal Morale damage to the entire enemy Battle Group and gain double Edge against non-psykers but also are at a risk of triggering more dangerous events.
  	\item \textbf{Close Quarter Experts/Master:} This unit is deadly in close quarter fighting common to battles taking place in enclosed spaces (cities, caves, space ships/stations, etc). Gains Edge against units lacking this trait. Can be activated in non-enclosed combat situations if combined with certain other traits like [Drop Troop] or [Stealthy] or if supported by other units.
- 	\item \textbf{Drop Troop:} The unit is able to perform combat drops from orbit or high altitude fliers right into the midst of the enemy. Doubles Morale and HP damage during the first round of combat.
+ 	\item \textbf{Drop Troop:} The unit is able to perform combat drops from orbit or high altitude fliers right into the midst of the enemy. Doubles Morale and HP damage during the first round of combat. Allows the unit to ignore the [Lengthy Deployment] trait for the insertion (but not for redeployment).
  	\item \textbf{Environment X Training:} This unit is a master in fighting in specific combat circumstances, usually due to prolonged training or ancestral habits. Unit gains Edge and an increased base Morale by 25\% if fighting in the environment but takes Flaw in radically different terrains.
  	\begin{itemize}
  		\item Desert Edge: Snow + Urban Flaw
  		\item Snow Edge: Desert + Urban Flaw
  		\item Jungle Edge: Wasteland + Urban Flaw
  		\item Wasteland Edge: Jungle + Urban Flaw
+ 		\item Plain Edge: Mountainside + Urban Flaw
+ 		\item Mountainside Edge: Plain + Urban Flaw
  		\item Urban/Enclosed Edge: Nature Flaw
  	\end{itemize}
  	\item \textbf{Adaptable:} This unit is quick to adapt to new combat circumstances. It is treated as having the fitting Environment Training trait after the first round of fighting in a new environment. It replaces the so gained trait once it changes to another environment.
@@ -65,12 +87,12 @@ Expert traits provide one Edge while master level traits provide two.
  	\item \textbf{Carrier Craft:} This void ship is capable of fielding entire squadrons of bombers, fighters and boarding craft. It can assist in ground warfare unlike most other void ships but may take HP damage doing so - depicting the loss of fighter craft.
  	\item \textbf{Long Range:} This unit is equipped with particular long ranged weaponry (sniper rifles, artillery, missiles, lances, etc). During open field combat it has the chance to inflict HP and Morale damage to the enemy without suffering return damage. If caught in a close quarter conflict, this unit has Flaw.
  	\item \textbf{Massive Frame:} This unit is so large that boarding it and conquering (or at least damaging) it from within is a possibility. Boarding units can be infantry only and will take HP damage from doing so due to internal defense systems but are protected from this units main weaponry. The problem of course is getting infantry into the massive frame in the first place...
- 	\item \textbf{Strength in Number:} This unit consist of huge numbers of individually weak units that seek to overwhelm the foe with their sheer mass. Loosing a few of its number does not faze it or its deadliness. It is immune to morale if its HP is above 50\% but takes double Morale damage if below 50\%.
+ 	\item \textbf{Strength in Number:} This unit consist of huge numbers of individually weak units that seek to overwhelm the foe with their sheer mass. Loosing a few of its number does not faze it or its deadliness. It is immune to morale if its HP is above 50\% but takes double Morale damage if below 50\%. If outnumbering an enemy unit (that is multiple units with this trait vs one enemy unit) the units base power level increases by 1 per supporting unit (max: Base+3) but all take double HP damage. It also gains Edge against Elite Infantry units.
  	\item \textbf{Shadow in the Warp:} This unit projects the fearsome Shadow in the Warp which is notorious for its ability to shut down or at least hamper psychic powers of the enemy. Any enemy unit with the [Psyker Delta] or [Psyker Beta] trait will temporarily loose it. [Psyker Alpha] and [Psyker Alpha+] units will have their trait ranking reduced by two steps instead, so Alpha is reduced to Delta and Alpha+ becomes Beta. Warp flight from and to the system of this unit is slowed and incurs a greatly increased dangers of becoming lost in the warp. Local Astropathic communication is also distorted or completely disabled.
  	\item \textbf{Waaagh! (XY\%):} Large Ork Battle Groups have a unique and shared Morale among all its units and are thus highly resistant to Morale damage. Loss of the current Waaagh-Boss will disable this trait for a random number of rounds until a new Boss rises. Ork units with this trait disabled take double Morale damage.
  	\item \textbf{Warp Entity:} This unit is at least partially neverborn. It is immediately destroyed if its morale drops to 0\%. It gains Edge against any unit without the [Psyker] trait and inflicts 50\% increased Morale damage. It will target enemy units with the [Psyker] trait above any other. Regardless of the battle outcome, it has a low chance to add the [Tainted] hidden trait to an enemy unit.
  	\item \textbf{Favored Enemy (X):} This unit has intense training and experience in fighting a certain enemy of mankind. It gains Edge and a morale increases by 30\% when facing units of that faction. It will target units of that faction first in case of a multi-faction war-zone.
- 	\item \textbf{Shielded (Warp/Energy/Void):} This unit benefits from some type of shielding. Damage from ranged attacks from units without the [Shield Breaker] trait is reduced by 50\%. Warp shields offer no protection against attacks made from units with the [Psyker] trait.
+ 	\item \textbf{Shielded (Warp/Energy/Void):} This unit benefits from some type of shielding. It gains double Edge against any unit without the [Shield Breaker] trait and it has a good chance to suffer no HP damage from such units. Warp shields offer no protection against attacks made from units with the [Psyker] trait.
 \end{itemize}
 
  	\subsection{Hidden Traits}
