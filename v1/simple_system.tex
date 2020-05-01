@@ -1,4 +1,45 @@
 %!TEX root = ./M42_Strategy.tex
+\chapter{Supplies \& Production}
+\textit{You can never have enough ammunition, fuel, canned rations and toilet paper. \\- Unknown Commander, ca. M02}
+Units, fleets and planets (summarily called Entity in this chapter) require supplies to keep fighting and producing. 
+A simplified system of Supply Points (SP) representing all resources will be used to reduce complexity at the outset.
+Depending on the stance the unit or planet assumes, it may increase or lower its current supply points by a certain amount.
+Should an entity run out of supply points, it will start taking HP and Morale damage each round in addition to an additional CE penalty should it be attacked by the enemy.
+
+\section{Production}
+Planets throughout the Imperium are geared towards the production of a wild variety of goods required by its fighting forces be it ammunition, tanks, fuel or new recruits.
+Planets (and other production facilities) can assume the production stance to unlock the full potential of its manufactoria.
+Taking on that stance opens the production slots of the entity, which can be either used to restock supply points or to recruit new units.
+
+\section{Technology Levels}
+Production slots are divided into three levels, representing the level of infrastructure required to produce goods of that level.
+\begin{itemize}
+	\item \textbf{Minima:} Basic goods that can be produced on nearly any Imperial planet, relying mostly on manual labor and ubiquitously available tools. One Minima slot can produce one SP per round.
+	\item \textbf{Vexillus:} Large-scale manufactoria powered by engines of steam, fuel, electricity, plasma generators or solar collectors dot the surface of many civilized and Hive worlds of the Imperium. The majority of common products is mass produced in such places. One Vexillus slot can produce two SP round.
+	\item \textbf{Exactus:} The most advanced technology and the ways to produce them is a highly guarded secret of the highest echelons of the Adeptus Mechanicus and limited to their own manufactoria, usually reserved for Forge Worlds. An Exactus slot can produce three SP per round.
+\end{itemize}
+
+\section{Tithes}
+Nearly every single planet in the Imperium of Men is subject to tithes collected by the Adeptus Terra. 
+The type and quantity of tithes vary as wildly as the range of worlds that make up the Imperum vary themselves.
+Commonly tithes come in the form of locally produced goods or military personnel for the endless wars of the Imperium.\\
+In gameplay terms, every planet must use some of its yearly production capabilities to satisfy its tithes. The exact tithes are noted for each planet. 
+Planets associated with the players have reduced tithe levels, representing the Imperium recognizing and supporting the war efforts of the respective faction by allowing them greater influence over the industrial output of their planets.
+\begin{DndSidebar}{Insol-8 [Planet]}
+\begin{itemize}
+	\item \textbf{Sub-Sector:} Hastea
+	\item \textbf{Classification:} Mining / Hive World
+	\item \textbf{Tech-Level:} Vexillus
+	\item \textbf{Slots:} 2 | 1 | 0
+	\item \textbf{Storage:} 12 SP
+	\item \textbf{Tithes:} Annually:
+	\begin{itemize}
+		\item Ore \& Mineral Shipment: equivalent to 4 SP
+		\item One Guard Regiment (Regular Infantry)
+	\end{itemize}
+\end{itemize}
+\end{DndSidebar}
+
 \chapter{Units \& Battlegroups}
 \section{Units}
 Units are the building blocks of the military force of a faction. The scale of a single unit varies greatly between (and even within) factions. While the Imperial Guard fields sprawling regiments several hundreds strong, the Adeptus Astartes deploy single squad units or even a single Dreadnought. The Adeptus Mechanicus can field its Skitarii forces in a similar fashion as a Guard Regiment, but has also access to Titans, which are deployed alone or in hunting packs of two.
@@ -110,6 +151,31 @@ These are all well and good and their use is encouraged, but this document will 
 Units are the smaller parts that make up the whole that is the Battle Group. \\
 Any Battle Group is lead by a Commander and may be accompanied by a number of heroes.
 
+\subsection{Logistic Groups}
+Crusading fleets are usually accompanied by at least one but possibly several ship groups tasked with collecting or producing raw resources (e.g. asteroid mining vessels, debris fields collector, gas planet extractors, hydroponic bays) and processing them to the most commonly required supply goods required by the fleet: food, fuel and ammunition.
+In addition to these host of smaller ships, large fleets may also possess a Goliath-class factory ship (or another massive ship with considerable industrial plants installed on it) which can even produce replacement parts or even some standard patterns of vehicles and equipment or any other commonly used industrial good.\\
+A single logistic group can store 12 SP and has 3 Minima production slots if it assumes the Production stance. A Goliath-class ship adds 6 storage capacity and 2 Vexillus slots on top of that.
+\begin{itemize}
+	\item \textbf{Astartes Chapter Fleet:} Start with one logistic group. Fleet based Chapters have access to at least one huge and ancient battle barge, which has considerable production abilities in addition to their fighting power and enormous resilience. A battle barge has the following profile: 1$\|$2$\|$1 (up to 8 SP per round). \\
+	Between the battle barge and the logistic group, a total of 30 SP can be stored and 11 SP produced per round.
+	
+	\item \textbf{Ad-Mech Explorator Fleet:} Start with two logistic groups and an Ark Mechanicus, which has the following profile: 2$\|$2$\|$2 (up to 12 SP per round).\\
+	This makes a total storage capacity of 36SP and a production rate of 18 SP per round.
+
+	\item \textbf{Imperial Guard Task Force:} Start with a single logistic group and one Goliath-class factory ship for a total storage of 20 SP and a production rate of 7 Sp per round.
+\end{itemize}
+
+\subsection{Procuring Supplies}
+Beside the production abilities of their logistic groups, Battle Groups can restore their supplies in the following ways.
+\begin{itemize}
+	\item \textbf{Faction Holds:} If the Battle Group spend at least one round within a system containing one of their faction holds, it can transfer an arbitrary amount of SPs from planet to Battle Group (and vice versa).
+	\item \textbf{Imperial Subvention:} Employing tactful negotiation (or using dire threats) it is usually possible to draw some supplies from any loyal Imperial planet the Battle Group is currently visiting. The amount it will get is highly situational though and sometimes planets can really not spare anything (e.g. if it currently engaged in war itself or is still recovering from one).
+	\item \textbf{Spoils of War:} A tradition as old as mankind: the winner gets it all. Scavenging the fields of battle (at least one turn) can upturn many salvageable supplies.
+	\item \textbf{Supply Line:} Notably employed to keep massive, prolonged battle zones supplied, supply lines are a temporarily trade route between a faction hold and a warzone, shipping an arbitrary number of SPs from the hold to the warzone akin to the [Faction Hold] option. To set up a supply line, one can either delegate own void ships to ferry to and fro or request such services from another factions (e.g. Rogue Traders or merchant houses). Setting up a supply line takes at least as many rounds as a warp travel would take from the faction hold to the warzone plus two additional rounds if third party ships are used.
+	\item \textbf{Rewards:} Other factions might provide material support for provided services, usually as part of a contract. A planetary governor might be willing to share some of his households funds with a Battle Group in exchange for a public parade in his capital to lessen the fears of his population or a besieged system is paying anything they have left in the planetary silos to their saviors.
+	\item \textbf{Trade:} Trading some of the Battle Groups assets for much needed supplies is usually considered a last resort by Commanders but might be able to save a crusade from certain failure. A Commander might be willing to provide the service of one of its regiments to a Rogue Trader for an extended time period, in exchange for a substantial amount of supplies. 
+\end{itemize}
+
 \section{Commanders \& Heroes}
 A commander is an accomplished leader of a faction who is put in command of a Battle Group. The faction leader of each faction is the overall commander and usually the commander of the key forces of the faction and is considered a Hero as well (see below).
 Secondary Commanders can be assigned to new Battle Groups as necessary. Commanders can gain traits and followers (advisors, bodyguards, ...) during the course of their career.
@@ -165,65 +231,13 @@ This particular experienced Navigator of a high-standing family is well able to 
 \end{DndSidebar}
 
 
-\chapter{Supplies \& Production}
-\textit{You can never have enough ammunition, fuel, canned rations and toilet paper. \\- Unknown Commander, ca. M02}
-\section{Supplies}
-Fleets, planets and Battle Groups require supplies to keep fighting and producing. 
-A simplified system of Supply Points (SP) representing all resources will be used to reduce complexity at the outset.
-Depending on the stance the unit or planet assumes, it may increase or lower its current supply points by a certain amount.
-Should an entity run out of supply points, it will start taking HP and Morale damage each round in addition to an additional CE penalty should it be attacked by the enemy.
-
-
-\section{Production}
-Planets throughout the Imperium are geared towards the production of a wild variety of goods required by its fighting forces be it ammunition, tanks, fuel or new recruits.
-Planets (and other production facilities) can assume the production stance to unlock the full potential of its manufactoria.
-Taking on that stance opens the production slots of the entity, which can be either used to restock supply points or to recruit new units.
-
-\subsection{Technology Levels}
-Production slots are divided into three levels, representing the level of infrastructure required to produce goods of that level.
-\begin{itemize}
-	\item \textbf{Minima:} Basic goods that can be produced on nearly any Imperial planet, relying mostly on manual labor and ubiquitously available tools. One Minima slot can produce one SP per round.
-	\item \textbf{Vexillus:} Large-scale manufactoria powered by engines of steam, fuel, electricity, plasma generators or solar collectors dot the surface of many civilized and Hive worlds of the Imperium. The majority of common products is mass produced in such places. One Vexillus slot can produce two SP round.
-	\item \textbf{Exactus:} The most advanced technology and the ways to produce them is a highly guarded secret of the highest echelons of the Adeptus Mechanicus and limited to their own manufactoria, usually reserved for Forge Worlds. An Exactus slot can produce three SP per round.
-\end{itemize}
-
-\subsection{Standard Template Construct}
-Any somewhat advanced technological product relies on patterns taken from uncovered STCs, which date back to the Dark Age of Technology. STC fragments are hoarded and jealously guarded by the Adeptus Mechanicus. Without access to the correct STC patterns no product can be produced, even if the planet would have the necessary infrastructure to do so. 
-Common patterns are usually licensable from the priests of Mars and allows the production of goods on non-mechanicus worlds.
-
-In the game, this is represented by system traits, noting the STCs available to their manufactoria. To prevent exceedingly long lists of traits, the game does track entire STC patterns rather than individual STCs. See the sidebars below for examples. Note however, that a world must also have the necessary infrastructure to actually produce goods of a specific pattern even if it has the STCs available. So while a feudal world might still retain the STC for a starship plasma core, it is far from able to actually produce it.
-
-\begin{DndSidebar}{Infantry-grade Las Weapons [Pattern]}
-This pattern includes some of the most widely used patterns of the reliable laser technology, including the trusty lasgun, hotshot variants and the powerful lascannon. The power pack design used to power them is also included.
- \begin{itemize}
- 	\item \textbf{Production Options:} Regular Infantry, Special Infantry [Scouts, Line, Storm Troopers, Tank Hunters], Armored [Leman Russ Annihilator]
- 	\item \textbf{Tech Level:} Vexillus
- \end{itemize}
-\end{DndSidebar}
-
-\begin{DndSidebar}{DIY Stubber Guns [Pattern]}
-This collection of patterns provides all necessary steps to assemble simple yet deadly solid projectile weapons (and associated ammunition) with a minimum of tools and knowledge.
- \begin{itemize}
- 	\item \textbf{Production Options:} Regular Infantry, Special Infantry [Scouts, Line]
- 	\item \textbf{Tech Level:} Minima
- \end{itemize}
-\end{DndSidebar}
-
-\subsection{Logistic Groups}
-Large fleets are usually accompanied by at least one but possibly several ship groups tasked with producing the most important goods (food, ammunition) on-the-fly, especially if supply lines are expected to be threatened or unreliable. 
-Such groups usually have a Goliath-class factory ship at their heart as well as a host of smaller vessels tasked with mining asteroids, gas nebulae, and stellar winds for base resources which are then processed by the Goliath into ammunition, wargear, tools, armor plating and most other industrial-grade goods the fleet requires. \newline
-A single logistic group can store 12 SP and has 2 Minima and 2 Vexillus production slots if it assumes the Production stance. Thus, a single logistic group can produce a up to a total of 6 SP per round.
-\begin{itemize}
-	\item \textbf{Astartes Chapter Fleet:} Start with one logistic group. Fleet based Chapters typically have access to huge and ancient battle barges, which have considerable production abilities in addition to their fighting power and enormous resilience. A battle barge has the following profile: 1$\|$2$\|$1 (up to 8 SP per round) and can store 12 SP.
-	\item \textbf{Ad-Mech Explorator Fleet:} Start with one logistic group and may include an Ark Mechanicus, which has the following profile: 2$\|$2$\|$2 (up to 12 SP per round) and can store up to 24 SP.
-\end{itemize}
-
 \chapter{Combat}
 \section{Stances} \label{stances}
-The exact upkeep cost of an entity is decided by the Stance(s) it is assuming during a round. Five types of Stances are defined here. Some of these can be combined. In such a case, add together the upkeep cost of each activity to get the total upkeep. If two Stances reduce Warp travel, that penalty does not stack.
+The upkeep cost of an entity is decided by the Stance(s) it is assuming during a round. Five types of Stances are defined here but some factions or Commanders may get access to additional ones - or loose access to some of those defined below. \\
+Some Stances can be combined. In such a case, add together the upkeep cost of each activity to get the total upkeep. If two Stances reduce Warp travel, that penalty does not stack.
 
-\begin{itemize}
-	\item \textbf{Idle:} This is the most basic "activity" possible and is generally frowned upon. This is only acceptable during times of severe resource shortage. Entities in this stance try to keep their upkeep as low as possible. Units are confined to their base without field training, planets stop their industry and send their workers home and fleets are put into high anchor or a stable orbit.
+\subsection{Idle}\label{idle_stance}
+This is the most basic "activity" possible and is generally frowned upon. This is only acceptable during times of severe resource shortage. Entities in this stance try to keep their upkeep as low as possible. Units are confined to their base without field training, planets stop their industry and send their workers home and fleets are put into high anchor or a stable orbit.
 	\begin{itemize}
 		\item \textbf{Cost:} 0 SP.
 		\item Planets and other producers loose their basic production and halt any projects and recruitments.
@@ -231,58 +245,62 @@ The exact upkeep cost of an entity is decided by the Stance(s) it is assuming du
 		\item This activity cannot be combined with other activities.
 	\end{itemize}
 
-	\item \textbf{Move:} Moving a single star ship through the void is a costly endeavor, but moving an entire fleet with accompanying ground forces is a herculean effort.
-	\begin{itemize}
-		\item \textbf{Cost:} 1 SP.
-		\item Unlocks inter-system warp travel and large scale intra-system ground force redeployment.
-		\item This can be combined with: Produce, Brace and Recover. If combined with Produce, reduce the number of hexes you can travel by half (round down).
-	\end{itemize}
+\subsection{Move}\label{move_stance}
+Moving a single star ship through the void is a costly endeavor, but moving an entire fleet with accompanying ground forces is a herculean effort.
+\begin{itemize}
+	\item \textbf{Cost:} 1 SP.
+	\item Unlocks inter-system warp travel and large scale intra-system ground force redeployment.
+	\item This can be combined with: Produce, Brace and Recover. If combined with Produce, reduce the number of hexes you can travel by half (round down).
+\end{itemize}
 
-	
-	\item \textbf{Produce:} This activity represents the expenditure of resources to produce something (usually supplies, a unit, or a planetary advancement). See table \ref{production_table_units} for example unit production projects.
-	\begin{itemize}
-		\item \textbf{Cost:} 2 SP.
-		\item Unlocks the production slots of the entity (if any).
-		\item Unlocks the basic production of the entity (if any).
-	\end{itemize}
-	
-	\item \textbf{Brace:} Being prepared for war can be a matter of life and death in the endless wars of the 42nd millennium. Units have to perform regular live-fire drills and regular combat exercises to keep their edge. Planetary defense forces need regular drills as well. Walls and gun emplacements need to be repaired and calibrated. Fleets have to patrol and perform maneuvers. Orbital defenses require regular maintenance and calibration just like ground emplacements.
-	\begin{itemize}
+\subsection{Produce}\label{produce_stance}
+This activity represents the expenditure of raw material to produce something (usually supplies, a unit, or a planetary advancement). See table \ref{production_table_units} for example unit production projects.	
+\begin{itemize}
+	\item \textbf{Cost:} 2 SP.
+	\item Unlocks the production slots of the entity (if any).
+	\item Unlocks the basic production of the entity (if any).
+\end{itemize}
+
+\subsection{Brace}\label{brace_stance}
+Being prepared for war can be a matter of life and death in the endless wars of the 42nd millennium. Units have to perform regular live-fire drills and regular combat exercises to keep their edge. Planetary defense forces need regular drills as well. Walls and gun emplacements need to be repaired and calibrated. Fleets have to patrol and perform maneuvers. Orbital defenses require regular maintenance and calibration just like ground emplacements.\\
+Light skirmishes with enemy forces are covered in this stance as well.
+\begin{itemize}
 		\item \textbf{Cost:} 2 SP.
 		\item Units gains one experience point per turn
 		\item Non-Unit entities (e.g. planets) can raise their HP beyond 100\% by taking this action. It rises by 10\% per round to a maximum of 150\%.
 		\item Units taking this activity gain the 'on guard' trait for the duration of the activity thus raising the chance to detect enemy activity in the local area.
 		\item Can be combined with the Move, Recover and Produce activities. 
 		\item If combining this stance with Produce, non-unit entities reduce their base production and available production slots by half (round up).
-	\end{itemize}
-	
-	\item \textbf{Fight:} In the far future, there is only war. While not entirely accurate for every world in the Imperium, it certainly is for the Imperium at large. War is an unmatched devourer of resources such as food, medical supplies, ammunition, soldiers, war-gear; all are spent in vast quantities every day to keep the Imperium intact for just one more day. 
-	This activity represents a major military conflict, leaving no time for anything else besides. Minor military activity such as guard duty, light skirmishes, or patrolling fall under Brace.
-	\begin{itemize}
-		\item \textbf{Cost:} 3 SP.
-		\item Units gain experience from combat. This can range from 2 to 8 experience points depending on the scale and length of the fighting as well as the outcome - victory yields more than defeat.
-		\item Units cannot combine this stance with any other.
-		\item Non-Unit entities can combine this stance with any other as long as its HP remains above 50\% with the following constraints: 
-		\begin{itemize}
-			\item Does no longer benefit from trade routes.
-			\item Production slots and base production are halved (round down)
-			\item Any recruitment process has a 33\% chance to not make any process during any given round due to enemy intervention.
-			\item HP increase from the Brace and Recover stance are reduced by half (round down).
-		\end{itemize}
-	\end{itemize}
-	
-	\item \textbf{Recover:} Combat losses and collateral damage are inevitable in the struggle for mankind's survival. Restoring good order, repairing damaged war-gear, and filling up the losses with new recruits is the purview of the Recover activity. The resource demands between two given units can be very large, thus the abstract notion of recovery points (RP) is used. The higher the RP of a unit type, the higher the cost to recover it.
-	\begin{itemize}
-		\item \textbf{Cost:} 1 SP per five recovery points used (round up).
-		\item Allows the entity in question to restore HP. Note that advanced units may have additional requirements that must be fulfilled before recovery kicks in (e.g. some may require a certain tech-level to be met).
-		\item Recovering causes the unit to loose some experience points as new recruits fill up the ranks of dead veterans. For mechanical units, this represents the introduction of new parts (and thus machine spirits) into a greater whole, introducing minute changes in its behavior. A unit looses one experience for each 20\% HP it recovers.
-		\item Non-Unit entities recover 10\% per turn.
-		\item Can be combined with the Move, Brace and Produce activities.
-	\end{itemize}   
 \end{itemize}
 
-\section{Recovery} \label{recovery_section}
-Table \ref{recovery_table} provides an overview over the requirements and resource demands of a unit recovering from combat damage.
+\subsection{Fight}\label{fight_stance}
+In the far future, there is only war. While not entirely accurate for every world in the Imperium, it certainly is for the Imperium at large. War is an unmatched devourer of resources such as food, medical supplies, ammunition, soldiers, war-gear; all are spent in vast quantities every day to keep the Imperium intact for just one more day. 
+This activity represents a major military conflict, leaving no time for anything else besides. Minor military activity such as guard duty, light skirmishes, or patrolling fall under Brace.
+\begin{itemize}
+	\item \textbf{Cost:} 3 SP + 1 per 10 units (starting with the 11th unit).
+	\item Units gain experience from combat. This can range from 2 to 8 experience points depending on the scale and length of the fighting as well as the outcome - victory yields more than defeat.
+	\item Units cannot combine this stance with any other.
+	\item Non-Unit entities can combine this stance with any other as long as its HP remains above 50\% with the following constraints: 
+	\begin{itemize}
+		\item Does no longer benefit from trade routes.
+		\item Production slots and base production are halved (round down)
+		\item Any recruitment process has a 33\% chance to not make any process during any given round due to enemy intervention.
+		\item HP increase from the Brace and Recover stance are reduced by half (round down).
+	\end{itemize}
+\end{itemize}
+
+\subsection{Recover}\label{recover_stance}
+Combat losses and collateral damage are inevitable in the struggle for mankind's survival. Restoring good order, repairing damaged war-gear, and filling up the losses with new recruits is the purview of the Recover activity. The resource demands between two given units can be very large, thus the abstract notion of recovery points (RP) is used. The higher the RP of a unit type, the higher the cost to recover it (see \ref{recovery_table} for details).
+\begin{itemize}
+	\item \textbf{Cost:} 1 SP per five recovery points used per round (round up).
+	\item Allows the entity in question to restore HP. Note that advanced units may have additional requirements that must be fulfilled before recovery kicks in (e.g. some may require a certain tech-level to be met).
+	\item Recovering causes the unit to loose some experience points as new recruits fill up the ranks of dead veterans. For mechanical units, this represents the introduction of new parts (and thus machine spirits) into a greater whole, introducing minute changes in its behavior. A unit looses one experience point for each 20\% HP it recovers. Experience will never drop to negatives.
+	\item Non-Unit entities recover 10\% per turn.
+	\item Can be combined with the Move, Brace and Produce activities.
+\end{itemize} 
+
+\section{Combat Resolution}
+\textit{Work in Progress}
 
 \onecolumn
 \chapter{Tables}
