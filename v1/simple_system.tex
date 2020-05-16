@@ -300,13 +300,79 @@ Combat losses and collateral damage are inevitable in the struggle for mankind's
 \end{itemize} 
 
 \section{Combat Resolution}
-\textit{Work in Progress}
+
+
+\chapter{Player Factions}
+The following sections provide faction specific rules, goals and information.
+
+\section{Adeptus Astartes}
+The Space Marines are the pinnacle of warriors within all the arsenal of the Imperium of Men and are creations of the Emperor himself.
+
+\subsection{Geneseed}
+Each warrior of the Adeptus Astartes carries within him two progenoid glands - an organ containing the DNA required to reproduce the unique organs which are fundamental in the creation of Astartes creation. 
+The first gland is ready for harvest once the recruit reaches the rank of Devastor, the second is ready for harvest after his ascension to Tactical rank and only ever collected after the death of the marine.\\
+Because of the fundamental requirement for Geneseed in the recruitment process, it is the single most valuable resource of a chapter and is thus tracked in-game as well.
+
+\subsection{Recruitment Process}
+The creation of an Astartes warrior is neither simple nor fast. At the start of the process, suitable candidates are required. Each chapter has its own, millenia old recruitment criteria and practices to select suitable youths. 
+In the game, chapter holds will irregularly produce one \textit{batch} of Aspirants ready for implantation.
+The batch has to be brought to the Chapters Fortress Monastery (or its flagship in case of fleet-based chapters) to start the implantation - which requires 12 Geneseed.
+The implantation is a production process takes two rounds and is an Exactus-rated project and produces one squad of Neophytes.
+Neophytes are first trained as Space Marine Scouts, which takes two rounds (see \ref{production_table_units}) at which point they can be fielded as a unit alongside their full fledged Battle Brothers.\\
+
+\subsection{Astartes Units and Experience}
+Being the pinnacle fighting force of the Imperium, Astartes quickly accumulate vast amounts of combat experience. 
+In turn the requirements to rise in rank are also much higher than in any other fighting force. 
+Astartes units use the following experience steps to determine their rank. 
+Note that the rank of a squad limits which battle field roles it may assume. A unit may always be deployed in a 'lower' role but never as a higher one.
+Once a squad reaches a new rank, its XP is reset to 0 for easier bookkeeping.
+Astartes squads can not reach a new rank by training alone but only by means of smiting the foes of the Emperor.
+\begin{itemize}
+	\item \textbf{Scout:} The first rank after introduction into the chapter. Scout units are not yet ready to wear full battle plate as the black carapace is not yet fully matured and ready to interface with the armor.
+	\begin{itemize}
+		\item Combat Roles: Scout, Bikers
+		\item XP: 0
+		\item Max Morale: 100\%
+	\end{itemize}
+	\item \textbf{Devastor:} The second rank sees the marines deployed in a heavy fiore support role, allowing them to get used to fight in Servor Armor and wield the weapons of a full battle brother and the heavy weapons found within the arsenal of the chapter. 
+	\begin{itemize}
+		\item Combat Roles: Devastor, Hellblaster, Aggressors, Supressor, Eliminator, Infiltrator, Centurio
+		\item XP: 12
+		\item Max Morale: 130\%
+	\end{itemize}
+	\item \textbf{Assault:} The third rank sees the marines deployed where the fighting is thickest and up close and personnel. Equipped with jump packs and close-range weaponry, these squads are used as the mobile quick-response force, taking the fight to the enemy and support pressed heavily battle brothers. 
+	\begin{itemize}
+		\item Combat Roles: Assault, Inceptors, Reivers
+		\item XP: 16
+		\item Max Morale: 150\%
+	\end{itemize}
+	\item \textbf{Tactical:} Central rank of a chapter, tactical marines are the allrounder unit, capable to deal with nearly any situation, tactic and weapon of the Adeptus Astartes.
+	\begin{itemize}
+		\item Combat Roles: Tactical, Intercessor, Incursors
+		\item XP: 20
+		\item Max Morale: 200\%
+	\end{itemize}
+	\item \textbf{Veteran:} The final rank an Astartes unit reaches sees them reach Veteran status, opening the final and most sacred chambers within the armories of the chapter. 
+	\begin{itemize}
+		\item Combat Roles: Veteran, Terminator
+		\item XP: 40
+		\item Max Morale: 250\%
+		\item Special: allows recruiting of a new hero or commander upon reaching this rank
+		\item Sepcial: if this unit is destroyed (but recovered) a single dreadnought can be recruited
+	\end{itemize}
+\end{itemize}
+
+
+
+\section{Adeptus Mechanicus}
+
+\section{Imperial Guard}
 
 \onecolumn
 \chapter{Tables}
 \begin{center}
  \begin{longtable}{l l l l l}\toprule
-	Unit Name & CE & Requirement & RP & Rate \\ \endhead\midrule
+	Unit Name & HP & Requirement & RP & Rate \\ \endhead\midrule
 	Regular Infantry & any & Minima & 0.5 & 40\% \\
 	Special Infantry & any & Minima & 1 & 33\% \\
 	Mechanized & any & Vexillus & 1 & 33\% \\
@@ -316,7 +382,7 @@ Combat losses and collateral damage are inevitable in the struggle for mankind's
 	\makecell[cl]{Astartes} & $\ge$50\% & Hold or Fleet & 1 & 40\%\\
 	\makecell[cl]{Astartes} & $<$50\% & Hold or Fleet & - & special\footnote{Needs recruits from the next lower experience level.}\\
 	Knight & $\ge$50\% & \makecell[lc]{Vexillus or\\Knight World} & 1 & 25\%\\
-	Knight & $<$50\% & \makecell[lc]{Exactus or\\Knight World} & 2 & 20\%\\
+	Knight & $<$50\% & \makecell[lc]{Exactus} & 2 & 20\%\\
 	Titan & $\ge$75\% & Vexillus & 3 & 15\% \\
 	Titan & $\ge$50\% & Exactus & 4 & 15\% \\
 	Titan & $<$50\% & Exactus & 4\footnote{Plus one or more randomly-determined parts depending on the severity of damage suffered.} & 15\% \\
@@ -338,17 +404,17 @@ Combat losses and collateral damage are inevitable in the struggle for mankind's
     \makecell[cl]{Special Infantry} & Advanced & Vexillus & 3 & - \\ \addlinespace
     \makecell[cl]{Pulled Artillery} & Advanced & Vexillus & 3 & - \\ \addlinespace
     \makecell[cl]{Leman Russ Hull}  & Part & Vexillus & 2 & - \\ \addlinespace
-    \makecell[cl]{Turret (Basic)} & Part & Vexillus & 2 & - \\ \addlinespace
-    \makecell[cl]{Turret (Advanced)}  & Part & Exactus & 3 & - \\ \addlinespace
+    \makecell[cl]{Turret (Basic)} & Part & Vexillus & 1 & - \\ \addlinespace
+    \makecell[cl]{Turret (Advanced)}  & Part & Exactus & 2 & - \\ \addlinespace
     \makecell[cl]{Leman Russ Assembly}  & Assembly & Vexillus & 1 & \makecell[cl]{Hull,\\Turret} \\\addlinespace
     \makecell[cl]{Astartes Scouts} & Advanced & Minima & 2 & Neophytes \\ \addlinespace
     \makecell[cl]{Astartes Wargear} & Part & Exactus & 4 & - \\ \addlinespace
     \makecell[cl]{Knight Chassis} & Part & Vexillus & 1 & - \\ \addlinespace
     \makecell[cl]{Knight Power Core} & Part & Exactus & 2 & - \\\addlinespace
-    \makecell[cl]{Titan Basic Weapon} & Part & Vexillus & 1 & - \\ \addlinespace
-    \makecell[cl]{Titan Advanced Weapon} & Part & Exactus & 2 & - \\ \addlinespace
+    \makecell[cl]{Titan Basic Weapon} & Part & Vexillus & 3 & - \\ \addlinespace
+    \makecell[cl]{Titan Advanced Weapon} & Part & Exactus & 3 & - \\ \addlinespace
     \makecell[cl]{Knight} & Assembly & Vexillus & \makecell{1 per\\part} & \makecell[cl]{Chassis,\\Core,\\Weapons} \\ \addlinespace
-    \makecell[cl]{Warhound Chassis} & Part & Vexillus & 4 & - \\ \addlinespace
+    \makecell[cl]{Warhound Chassis} & Part & Vexillus & 2 & - \\ \addlinespace
     \makecell[cl]{Warhound Power Core} & Part & Exactus & 4 & - \\\addlinespace
     \makecell[cl]{Warhound} & Assembly & Exactus & \makecell{1 per\\part} & \makecell[cl]{Chassis,\\Core,\\Weapons} \\ \addlinespace
     \makecell[cl]{Warlord Chassis} & Part & Vexillus & 4 & - \\ \addlinespace
